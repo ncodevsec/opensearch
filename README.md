@@ -2,14 +2,12 @@
 
 # SEARCH HUB
 
-### Skip the Homepage. Stay Focused.
+<img src="./Img/search-hub-poster.png" alt="Search Hub Poster" style="max-width:900px; width:100%; height:auto; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.08);" />
 
-**One search box. Direct results. No distractions.**
+<p><em>A featured post showcasing Search Hub with a full UI screenshot and productivity-first design.</em></p>
 
-Stop wasting time on homepage feeds. Search Hub bypasses website homepages and takes you straight to what you need.
-
-[![Live Demo](https://img.shields.io/badge/🌐%20LIVE%20DEMO-Visit%20Now-2563EB?style=for-the-badge&labelColor=1F2937)](https://ncodevsec.github.com/search_hub/)
-[![License](https://img.shields.io/badge/License-MIT-8B5CF6?style=flat-square&labelColor=1F2937)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/🌐%20LIVE%20DEMO-Visit%20Now-2563EB?style=for-the-badge&labelColor=1F2937)](https://ncodevsec.github.io/search_hub/)
+[![License](https://img.shields.io/badge/License-MIT-8B5CF6?style=for-the-badge&labelColor=1F2937)](LICENSE)
 
 </div>
 
@@ -34,6 +32,8 @@ That's it. No homepage distractions. Pure productivity.
 - **50+ Services** — Google, GitHub, Stack Overflow, Wikipedia, YouTube, Amazon, and more
 - **No Distractions** — Bypass homepages and feeds completely
 - **Favorites** — Quick access to your most-used services
+- **Built-in Calendar** — Keep track of dates directly from the dashboard
+- **Todo List** — Add, view, and manage tasks in one place
 - **Beautiful UI** — Tailwind CSS, responsive design, 100% client-side
 - **Lightning Fast** — Zero backend, instant results
 
