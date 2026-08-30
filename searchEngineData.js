@@ -201,6 +201,46 @@ const sections = [
 		],
 	},
 	{
+		title: "Movies & Series",
+		forms: [
+			{
+				name: "IMDb",
+				template: "https://www.imdb.com/find/?q={q}",
+				icon: "https://www.imdb.com/favicon.ico",
+			},
+			{
+				name: "DiscoverFTP",
+				template: "https://movies.discoveryftp.net/m/find/{q}",
+				icon: "https://movies.discoveryftp.net/assets/images/icon.png",
+			},
+			{
+				name: "TMDB",
+				template: "https://www.themoviedb.org/search?query={q}",
+				icon: "https://www.themoviedb.org/favicon.ico",
+			},
+			{
+				name: "Letterboxd",
+				template: "https://letterboxd.com/search/{q}/",
+				icon: "https://letterboxd.com/favicon.ico",
+			},
+			{
+				name: "FlixHQ",
+				template: "https://flixhq.gd/browser?keyword={q}",
+				icon: "https://flixhq.gd/favicon.ico",
+			},
+			{
+				name: "Soap2Day",
+				template: "https://ww25.soap2day.day/?s={q}",
+				icon: "https://soap2day.day/favicon.ico",
+			},
+			{
+				name: "1337x",
+				template: "https://1337x.st/search/{q}/1/",
+				icon: "https://1337x.st/favicon.ico",
+			}
+		],
+	},
+	{
 		title: "Images & Media",
 		forms: [
 			{
