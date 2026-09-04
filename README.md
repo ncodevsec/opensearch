@@ -2,7 +2,7 @@
 
 A productivity-first multi-search dashboard built with React and Vite. Instead of bouncing through noisy homepage feeds, Open Search gives you a single clean interface for searching across dozens of engines, AI tools, and media sources without the usual distractions.
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Open%20App-2563EB?style=for-the-badge&labelColor=1F2937)](https://ncodevsec.github.io/open_search/)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Open%20App-2563EB?style=for-the-badge&labelColor=1F2937)](https://ncodevsec.github.io/opensearch/)
 [![License](https://img.shields.io/badge/License-MIT-8B5CF6?style=for-the-badge&labelColor=1F2937)](LICENSE)
 
 ## Overview
@@ -49,7 +49,7 @@ This version is built as a modern React app with Vite and Tailwind styling, repl
 ## Project structure
 
 ```bash
-open_search/
+opensearch/
 ├── docs/                  # Production build output for GitHub Pages
 ├── public/                # Static assets
 ├── src/
