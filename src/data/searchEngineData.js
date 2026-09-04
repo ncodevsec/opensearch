@@ -241,6 +241,11 @@ export const sections = [
                 name: "1337x",
                 template: "https://1337x.st/search/{q}/1/",
                 icon: "https://1337x.st/favicon.ico",
+            },
+            {
+                name: "MovieBox",
+                template: "https://themoviebox.xyz/web/searchResult?keyword={q}",
+                icon: "https://themoviebox.xyz/favicon.ico",
             }
         ],
     },
