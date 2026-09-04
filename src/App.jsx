@@ -102,6 +102,7 @@ function App() {
 		readStorage(STORAGE_KEYS.layout, "grid"),
 	);
 	const [showSettings, setShowSettings] = useState(false);
+	const [showServiceList, setShowServiceList] = useState(false);
 	const [todos, setTodos] = useState(() =>
 		readStorage(STORAGE_KEYS.todos, []),
 	);
@@ -288,7 +289,7 @@ function App() {
 									<h1 className="text-xl font-semibold text-slate-900">
 										Open Search
 									</h1>
-									<p className="mt-2 text-xs uppercase tracking-wide text-slate-500">
+									<p className="hidden md:block mt-2 text-xs uppercase tracking-wide text-slate-500">
 										Keep productive • Search anything
 									</p>
 								</div>
@@ -372,7 +373,7 @@ function App() {
 								</button>
 							</div>
 						</div>
-						<div className="flex w-full justify-center md:w-auto md:justify-end">
+						<div className="hidden md:flex w-full justify-center md:w-auto md:justify-end">
 							<div className="mt-4 text-end md:mt-0 md:min-w-30">
 								<p className="text-2xl font-semibold tracking-tight text-slate-900">
 									{formattedClock}
@@ -501,12 +502,42 @@ function App() {
 
 									<hr className="border-slate-200" />
 
+									<div className="md:hidden p-3">
+										<button
+											type="button"
+											className={`w-full flex items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition ${showServiceList ? "border-blue-500 bg-blue-500/10 text-blue-600" : "border-slate-300 text-slate-700 hover:bg-slate-100"}`}
+											onClick={() =>
+												setShowServiceList(
+													(current) => !current,
+												)
+											}
+										>
+											{showServiceList
+												? "Hide Search Engine List"
+												: "Show Search Engine List"}
+											<svg
+												viewBox="0 0 24 24"
+												width="16"
+												height="16"
+												fill="none"
+												stroke="currentColor"
+												strokeWidth="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												aria-hidden="true"
+												className={
+													showServiceList
+														? "rotate-180"
+														: ""
+												}
+											>
+												<path d="M6 9l6 6 6-6"></path>
+											</svg>
+										</button>
+									</div>
+
 									<div
-										className={
-											layout === "compact"
-												? "grid gap-4 p-3"
-												: "grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 p-3"
-										}
+										className={`${showServiceList ? "grid" : "hidden"} ${layout === "compact" ? "md:grid gap-4 p-3" : "md:grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-3"}`}
 									>
 										{sections.map((section) => {
 											const isExpanded =
@@ -798,7 +829,7 @@ function App() {
 								</h3>
 								<form
 									onSubmit={addTodo}
-									className="mt-4 grid gap-3 sm:grid-cols-[1fr_auto]"
+									className="mt-4 grid gap-3 grid-cols-[1fr_auto]"
 								>
 									<input
 										value={todoInput}
