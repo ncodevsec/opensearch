@@ -6,23 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description"
 		content="Open Search is a local-first productivity dashboard for fast multi-engine search." />
+	<meta name="theme-color" content="#000000" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Open Search | Global Search Dashboard</title>
-	<link rel="icon" type="image/png" sizes="192x192" href="./assets/open-search-192px.png" />
-	<link rel="icon" type="image/png" sizes="512x512" href="./assets/open-search-512px.png" />
-	<link rel="manifest" href="./assets/manifest.json" />
-	<script>
-		if ('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('/service-worker.js')
-					.then(registration => {
-						console.log('Service Worker registered with scope:', registration.scope);
-					})
-					.catch(error => {
-						console.error('Service Worker registration failed:', error);
-					});
-			});
-		}
-	</script>
+	<link rel="icon" type="image/png" sizes="192x192" href="./open-search-192px.png" />
+	<link rel="icon" type="image/png" sizes="512x512" href="./open-search-512px.png" />
+	<link rel="manifest" href="./manifest.webmanifest" />
   <script type="module" crossorigin src="./assets/index.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index.css">
 </head>
