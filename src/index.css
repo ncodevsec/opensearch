@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* Theme variables (light by default) */
+:root {
+	--page-bg: #f1f5f9;
+	--panel-bg: #ffffff;
+	--panel-alt: #f8fafc;
+	--muted-text: #475569;
+	--text: #0f172a;
+	--border: rgba(148, 163, 184, 0.22);
+	--shadow: rgba(44, 44, 44, 0.08);
+	--accent: #f59e0b;
+	--accent-soft: rgba(245, 158, 11, 0.12);
+	--calendar-day: #334155;
+	--calendar-day-muted: #94a3b8;
+	--calendar-today-bg: linear-gradient(135deg, #58d7df, #0958b2);
+	--calendar-today-shadow: rgba(11, 120, 245, 0.28);
+}
+
+/* Dark theme overrides (applied when the "dark" class is present on <html> or root) */
+.dark {
+	--page-bg: #000000;
+	--panel-bg: #101010;
+	--panel-alt: #172132;
+	--muted-text: #94a3b8;
+	--text: #e5e7eb;
+	--border: rgba(148, 163, 184, 0.18);
+	--shadow: rgba(20, 20, 20, 0.52);
+	--accent: #fbbf24;
+	--accent-soft: rgba(251, 191, 36, 0.12);
+	--calendar-day: #e2e8f0;
+	--calendar-day-muted: #94a3b8;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	background: var(--page-bg);
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background: var(--page-bg);
+	color: var(--text);
+	font-family:
+		Inter,
+		"Segoe UI",
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Helvetica Neue",
+		sans-serif;
+}
+
+button {
+	font: inherit;
+	cursor: pointer;
+}
+
+input {
+	font: inherit;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+#root {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.dark body,
+.dark html,
+.dark #root {
+	background: var(--page-bg);
+	color: var(--text);
+}
+
+.dark .bg-slate-100 {
+	background-color: var(--page-bg) !important;
+}
+
+.dark .bg-slate-50 {
+	background-color: var(--panel-alt) !important;
+}
+
+.dark .bg-white,
+.dark .bg-slate-200,
+.dark .bg-slate-300 {
+	background-color: var(--panel-bg) !important;
+}
+
+.dark .border-slate-200,
+.dark .border-slate-100,
+.dark .border-slate-300,
+.dark .border-slate-400 {
+	border-color: var(--border) !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-slate-600,
+.dark .text-slate-500,
+.dark .text-slate-400,
+.dark .text-slate-300,
+.dark .text-slate-200 {
+	color: var(--text) !important;
+}
+
+.dark .text-slate-500,
+.dark .text-slate-600,
+.dark .text-slate-400,
+.dark .text-slate-300 {
+	color: var(--muted-text) !important;
+}
+
+.dark .placeholder\:text-slate-400::placeholder {
+	color: rgba(148, 163, 184, 0.8) !important;
+}
+
+.dark .hover\:bg-slate-200:hover,
+.dark .hover\:bg-slate-100:hover,
+.dark .hover\:bg-slate-300:hover,
+.dark .hover\:bg-slate-50:hover {
+	background-color: rgba(148, 163, 184, 0.08) !important;
+}
+
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-2xl {
+	box-shadow: 0 12px 30px var(--shadow) !important;
+}
+
+.dark .bg-slate-900\/70 {
+	background-color: rgba(2, 6, 23, 0.72) !important;
+}
+
+.dark .border-amber-400,
+.dark .bg-amber-500\/10,
+.dark .text-amber-500,
+.dark .border-sky-500,
+.dark .bg-sky-500\/10,
+.dark .text-sky-600,
+.dark .text-sky-500 {
+	border-color: rgba(251, 191, 36, 0.75) !important;
+	background-color: rgba(251, 191, 36, 0.12) !important;
+	color: #fbbf24 !important;
+}
+
+.dark .bg-amber-100 {
+	background-color: rgba(251, 191, 36, 0.12) !important;
+}
+
+.dark .text-amber-500 {
+	color: #fbbf24 !important;
+}
+
+.dark .bg-emerald-500 {
+	background-color: #10b981 !important;
+}
+
+.dark .text-slate-700 {
+	color: var(--text) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}

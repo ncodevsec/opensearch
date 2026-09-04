@@ -1,70 +1,116 @@
-<div align="center">
+# Open Search
 
-# SEARCH HUB
+A productivity-first multi-search dashboard built with React and Vite. Instead of bouncing through noisy homepage feeds, Open Search gives you a single clean interface for searching across dozens of engines, AI tools, and media sources without the usual distractions.
 
-<img src="./Img/search-hub-poster.png" alt="Search Hub Poster" style="max-width:900px; width:100%; height:auto; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.08);" />
-
-<p><em>A featured post showcasing Search Hub with a full UI screenshot and productivity-first design.</em></p>
-
-[![Live Demo](https://img.shields.io/badge/🌐%20LIVE%20DEMO-Visit%20Now-2563EB?style=for-the-badge&labelColor=1F2937)](https://ncodevsec.github.io/search_hub/)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Open%20App-2563EB?style=for-the-badge&labelColor=1F2937)](https://ncodevsec.github.io/open_search/)
 [![License](https://img.shields.io/badge/License-MIT-8B5CF6?style=for-the-badge&labelColor=1F2937)](LICENSE)
 
-</div>
+## Overview
 
----
+Open Search is designed for focused online research and quick lookups. You can:
 
-## The Problem
+- search with a single input box
+- switch between engines instantly
+- pin your favorite services for fast access
+- type service hints like `@google` or `@github` to target a search engine
+- keep a lightweight productivity dashboard with a calendar and TODO list
+- enjoy a responsive dark/light UI with local persistence
 
-Every time you search, you land on a website's **homepage full of distractions**: trending content, recommendations, ads, social feeds. Minutes of your productivity disappear.
-
-Search Hub **solves this**: One unified search interface → Direct results. No homepage. No feeds. Just answers.
-
-## How It Works
-
-1. **Type your query**
-2. **Select a service** (Google, GitHub, Wikipedia, YouTube, etc.)
-3. **Get results instantly** — Direct search results, nothing else
-
-That's it. No homepage distractions. Pure productivity.
+This version is built as a modern React app with Vite and Tailwind styling, replacing the earlier static HTML approach.
 
 ## Features
 
-- **50+ Services** — Google, GitHub, Stack Overflow, Wikipedia, YouTube, Amazon, and more
-- **No Distractions** — Bypass homepages and feeds completely
-- **Favorites** — Quick access to your most-used services
-- **Built-in Calendar** — Keep track of dates directly from the dashboard
-- **Todo List** — Add, view, and manage tasks in one place
-- **Beautiful UI** — Tailwind CSS, responsive design, 100% client-side
-- **Lightning Fast** — Zero backend, instant results
+- 50+ search providers across general search, AI, social, privacy, and media categories
+- Direct search results without homepage clutter
+- Favorites/pinned services for your most-used tools
+- Search engine suggestions while typing
+- Default engine selection from the settings panel
+- Theme switching and layout toggling
+- Built-in calendar widget
+- Todo list stored in local storage
+- Fast, client-side-only experience
+- Responsive UI for desktop and mobile
 
-## Files
+## How it works
 
+1. Type your query in the main search bar.
+2. Optionally specify a service using an inline selector such as `@google`, `@github`, or `@youtube`.
+3. Hit Enter or click the search button.
+4. Search opens in a new tab instantly, without landing on a noisy homepage.
+
+## Tech stack
+
+- React 19
+- Vite
+- Tailwind CSS
+- JavaScript
+- LocalStorage for saved preferences and tasks
+
+## Project structure
+
+```bash
+open_search/
+├── docs/                  # Production build output for GitHub Pages
+├── public/                # Static assets
+├── src/
+│   ├── App.jsx            # Main UI and application logic
+│   ├── App.css            # App-specific styling
+│   ├── index.css          # Global styles
+│   ├── main.jsx           # React entry point
+│   └── data/
+│       └── searchEngineData.js
+├── index.html             # Root HTML template
+├── package.json           # Scripts and dependencies
+├── vite.config.js         # Vite configuration
+├── eslint.config.js       # Linting rules
+├── README.md              # Project documentation
+├── LICENSE                # MIT License
+└── .gitignore             # Git ignore rules
 ```
-├── index.html          # Main interface
-├── script.js           # Search functionality
-├── searchEngineData.js # 50+ service templates
-├── style.css           # Custom styling
-└── README.md           # This file
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Install dependencies
+
+```bash
+npm install
 ```
 
-## Built With
+### Run locally
 
-- HTML5 + Vanilla JavaScript (no frameworks)
-- Tailwind CSS (modern, clean design)
-- 100% client-side (no tracking, no server)
+```bash
+npm run dev
+```
 
-## Get Started
+The app will start in development mode, usually at `http://localhost:5173`.
 
-**[Use Search Hub Now](https://ncodevsec.github.com/search_hub/)** — Bookmark it. Make it your default search interface.
+### Build production bundle
 
----
+```bash
+npm run build
+```
 
-<div align="center">
+This writes the production build into the `docs/` folder, which is suitable for GitHub Pages deployment.
 
-**Stay productive. Skip the distractions.**
+### Preview production build
 
-Built by [ncodevsec](https://github.com/ncodevsec) • MIT License
+```bash
+npm run preview
+```
 
-</div>
+## Deployment
 
-</div>
+This project is configured to build into `docs/` and can be deployed as a static site on GitHub Pages or any static hosting provider.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## A note
+
+Open Search is built for speed and focus. The goal is simple: one search interface, direct results, and fewer distractions while you work.
